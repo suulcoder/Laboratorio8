@@ -8,6 +8,7 @@ public class manager : MonoBehaviour {
     public Light[] DiscoLight;
     public Light FlashLight;
     public Text MyText;
+    public AudioSource play;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,7 @@ public class manager : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
+            play.Play();
             if (FlashLight.intensity == 0)
             {
                 FlashLight.intensity = 10;
